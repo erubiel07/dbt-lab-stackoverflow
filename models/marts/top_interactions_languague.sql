@@ -23,6 +23,6 @@ select
 from tmp_query_clean a
 left join {{ ref("stg_posts_answers") }} b on a.accepted_answer_id = b.post_id
 group by 1
-having c > 300
+having c > 1
 order by 2 desc
 limit 1000
